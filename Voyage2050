@@ -41,6 +41,16 @@ stages {
           }
         }
     }
+
+    stage('Summer_Sales_Saturn') {
+        steps {
+          script {
+            echo "Promouvoir les soldes d'été pour Saturne"
+            sleep 10
+            echo "Promotions effectuées" 
+          }
+        }
+    }
 }
 
 }
