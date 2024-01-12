@@ -11,44 +11,34 @@ pipeline {
         stage('Printing name') {
             steps {
                 script {
-                    def name = "${params.NAME}"
-                    def description = "${params.DESC}"
-                    def skip_test = "${params.SKIP_TEST}"
-                    def branch = "${params.BRANCH}"
-                    def password_server = "${params.SONAR_SERVER_PWD}"
+                    echo "Hello ${params.NAME}"
 
+                echo "Job Details: ${params.DESC}"
+
+                echo "Skip Running Test case ?: ${params.SKIP_TEST}"
+
+                echo "Branch Choice: ${params.BRANCH}"
+
+                echo "SONAR Password: ${params.SONAR_SERVER_PWD}"
                    
                 }
             }
         }
 
-        stage('build') {
-      steps {
-        script {
-          echo "Checking de la coque"
-          sleep 10
-          echo "Integrité de la coque à 100%"
+       stage('BUILD') {
+            steps {
+                echo 'Developpement'
+            }
         }
-      }
-    }
     stage('Test') {
-      steps {
-        script {
-          echo "Verification des équipement de navigation"
-          sleep 10
-          echo "Léger disfonctionnement de la carte numerique" 
+            steps {
+                echo 'Testing'
+            }
         }
-      }
-    }
-
-    stage('Deploy') {
-      steps {
-        script {
-          echo "Verification des equipements de communication"
-          sleep 10
-          echo "Test radio ok. "    
+        stage('DEPLOY') {
+            steps {
+                echo 'Mise en Production'
+            }
         }
-      }
-    }
    }
 }
