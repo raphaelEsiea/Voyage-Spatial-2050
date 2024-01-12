@@ -36,8 +36,18 @@ stages {
         steps {
           script {
             echo "Mise à jour de la plage de dates pour inclure les dates du lancement sur Mars"
-            sleep 10
+            sleep 5
             echo "Mise à jour réussi" 
+          }
+        }
+    }
+
+    stage('Loading_time_reduce') {
+        steps {
+          script {
+            echo "Réduction du temps de chargement des listes de vols"
+            sleep 5
+            echo "Réduction effectué" 
           }
         }
     }
@@ -46,8 +56,38 @@ stages {
         steps {
           script {
             echo "Promouvoir les soldes d'été pour Saturne"
-            sleep 10
+            sleep 5
             echo "Promotions effectuées" 
+          }
+        }
+    }
+
+    stage('Concentration_below_250PPM') {
+        steps {
+          script {
+            echo "Maintiens de la concentration des réservoir de carburant au dessus des 250 PPM au lancement"
+            sleep 5
+            echo "Maintiens effectué" 
+          }
+        }
+    }
+
+    stage('Consumption_by_1%') {
+        steps {
+          script {
+            echo "Réduction de la consommation globale de carburant de 1%"
+            sleep 5
+            echo "Réduction effectuée" 
+          }
+        }
+    }
+
+    stage('Hiring_Engineer') {
+        steps {
+          script {
+            echo "Enbauche d'un nouvel ingénieur"
+            sleep 5
+            echo "Embauche effectué" 
           }
         }
     }
