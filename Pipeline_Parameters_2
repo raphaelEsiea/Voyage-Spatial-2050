@@ -1,1 +1,25 @@
-
+pipeline {
+    agent any
+    parameters {
+        string(name: 'NAME', description: 'Please tell me your name')
+        string(name: 'DESC', description: 'Describe about the job details')
+        boolean(name: 'SKIP_TEST', description: 'want to skip running test cases')
+        choice(name: 'BRANCH', choices: ['main', 'dev'], description: 'Choose the branch')
+        password(name: 'SONAR_SERVER_PWD', description: 'Enter SONAR password')
+    }
+    stages {
+        stage('Printing name') {
+            steps {
+                script {
+                    def name = "${params.NAME}"
+                    def gender = "${params.GENDER}"
+                    if(gender == "Male") {
+                        echo "Mr. $name"    
+                    } else {
+                        echo "Mrs. $name"
+                    }
+                }
+            }
+        }
+   }
+}
