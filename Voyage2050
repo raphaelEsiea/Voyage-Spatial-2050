@@ -31,16 +31,6 @@ stages {
         }
       }
     }
-
-    stage('Update_Date') {
-        steps {
-          script {
-            echo "Mise à jour de la plage de dates pour inclure les dates du lancement sur Mars"
-            sleep 10
-            echo "Mise à jour réussi" 
-          }
-        }
-    }
 }
 
 }
