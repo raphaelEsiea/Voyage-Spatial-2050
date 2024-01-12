@@ -40,7 +40,7 @@ stages {
             echo "Mise à jour réussi" 
           }
         }
-      }
+    }
 }
 
 }
